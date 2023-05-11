@@ -1,0 +1,17 @@
+
+<!--
+    * Auto generate code
+    * Author: lgh
+    * Name: CaretTop
+!-->
+
+<template>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="M512 320 192 704h639.936z"/></svg>
+</template>
+
+<script lang="ts">
+import type { DefineComponent } from 'vue'
+export default {
+name: 'CaretTop',
+} as DefineComponent
+</script>

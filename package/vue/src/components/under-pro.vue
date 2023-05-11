@@ -1,0 +1,18 @@
+
+<!--
+    * Auto generate code
+    * Author: lgh
+    * Name: UnderPro
+!-->
+
+<template>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+<path fill="currentColor" d="M87.83 352.021L489.386 753.58a32 32 0 0 0 42.986 2.069l2.283-2.07 401.536-401.557a8.533 8.533 0 0 0 2.496-6.037v-66.347a8.533 8.533 0 0 0-14.57-6.037L512.02 685.675 99.904 273.6a8.533 8.533 0 0 0-14.57 6.037v66.347a8.533 8.533 0 0 0 2.495 6.037z"  /></svg>
+</template>
+
+<script lang="ts">
+import type { DefineComponent } from 'vue'
+export default {
+name: 'UnderPro',
+} as DefineComponent
+</script>

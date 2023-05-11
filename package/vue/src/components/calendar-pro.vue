@@ -1,0 +1,18 @@
+
+<!--
+    * Auto generate code
+    * Author: lgh
+    * Name: CalendarPro
+!-->
+
+<template>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+<path fill="currentColor" d="M375.467 64c4.693 0 8.533 3.84 8.533 8.533V128h256V72.533c0-4.693 3.84-8.533 8.533-8.533h46.934c4.693 0 8.533 3.84 8.533 8.533V128h106.667a128 128 0 0 1 128 128v554.667a128 128 0 0 1-128 128H213.333a128 128 0 0 1-128-128V256a128 128 0 0 1 128-128H320V72.533c0-4.693 3.84-8.533 8.533-8.533h46.934z m499.2 341.333H149.333v405.334a64 64 0 0 0 60.246 63.893l3.754 0.107h597.334a64 64 0 0 0 63.893-60.246l0.107-3.754V405.333z m-64-213.333H213.333a64 64 0 0 0-63.893 60.245l-0.107 3.755v85.333h725.334V256a64 64 0 0 0-60.246-63.893l-3.754-0.107z"  /></svg>
+</template>
+
+<script lang="ts">
+import type { DefineComponent } from 'vue'
+export default {
+name: 'CalendarPro',
+} as DefineComponent
+</script>
