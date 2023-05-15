@@ -6,13 +6,25 @@
 !-->
 
 <template>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <i class="l-icon" :style="{fontSize:fontSize.toString().replace(/px/gi, '') + 'px',color:color}">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
 <path fill="currentColor" d="M510.72512 44.54912C252.53888 44.54912 42.496 254.592 42.496 512.77312s210.04288 468.224 468.22912 468.224c258.176 0 468.224-210.04288 468.224-468.224s-210.048-468.224-468.224-468.224z m0 874.68544c-224.12288 0-406.46144-182.33856-406.46144-406.46144s182.33856-406.46144 406.46144-406.46144c224.11776 0 406.45632 182.33856 406.45632 406.46144s-182.33856 406.46144-406.45632 406.46144z"  /><path fill="currentColor" d="M528.30208 547.65568V267.7248a30.88384 30.88384 0 0 0-61.76768 0v292.72576c0 8.192 3.2512 16.04608 9.04192 21.8368l150.9888 150.98368a30.76096 30.76096 0 0 0 21.8368 9.04704 30.88384 30.88384 0 0 0 21.84192-52.72064l-141.94176-141.94176z"  /></svg>
+    </i>
 </template>
 
-<script lang="ts">
-import type { DefineComponent } from 'vue'
-export default {
-name: 'ClockPro',
-} as DefineComponent
+<script lang="ts" setup>
+const props = defineProps({
+    fontSize: {
+        type: [String ,Number],
+        default: "20px"
+    },
+    color: {
+        type: String,
+        default: "#000000"
+    },
+    icon: {
+        type: String,
+        default: "Apple"
+    }
+})
 </script>

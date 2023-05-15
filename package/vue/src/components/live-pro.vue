@@ -6,13 +6,25 @@
 !-->
 
 <template>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <i class="l-icon" :style="{fontSize:fontSize.toString().replace(/px/gi, '') + 'px',color:color}">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
 <path fill="currentColor" d="M682.667 106.667A128 128 0 0 1 810.24 224.064l93.056-15.51a85.333 85.333 0 0 1 99.37 84.182v438.528a85.333 85.333 0 0 1-99.37 84.181l-93.056-15.509a128 128 0 0 1-127.573 117.397H149.333a128 128 0 0 1-128-128V234.667a128 128 0 0 1 128-128h533.334z m0 64H149.333a64 64 0 0 0-63.893 60.245l-0.107 3.755v554.666a64 64 0 0 0 60.246 63.894l3.754 0.106h533.334a64 64 0 0 0 63.893-60.245l0.107-3.755V234.667a64 64 0 0 0-60.246-63.894l-3.754-0.106z m233.642 100.757l-2.474 0.256-103.168 17.195v446.229l104.021 17.323 2.645 0.17a21.333 21.333 0 0 0 21.184-18.837l0.15-2.496V292.736a21.333 21.333 0 0 0-22.358-21.333z m-265.642-36.757a32 32 0 1 1 0 64 32 32 0 0 1 0-64z"  /></svg>
+    </i>
 </template>
 
-<script lang="ts">
-import type { DefineComponent } from 'vue'
-export default {
-name: 'LivePro',
-} as DefineComponent
+<script lang="ts" setup>
+const props = defineProps({
+    fontSize: {
+        type: [String ,Number],
+        default: "20px"
+    },
+    color: {
+        type: String,
+        default: "#000000"
+    },
+    icon: {
+        type: String,
+        default: "Apple"
+    }
+})
 </script>

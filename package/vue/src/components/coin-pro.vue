@@ -6,13 +6,25 @@
 !-->
 
 <template>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <i class="l-icon" :style="{fontSize:fontSize.toString().replace(/px/gi, '') + 'px',color:color}">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
 <path fill="currentColor" d="M512 64c247.424 0 448 200.576 448 448S759.424 960 512 960 64 759.424 64 512 264.576 64 512 64z m0 64c-212.075 0-384 171.925-384 384s171.925 384 384 384 384-171.925 384-384-171.925-384-384-384z m104.32 165.717l33.173 33.195a8.533 8.533 0 0 1 0 12.053l-87.722 87.702h112.362c4.694 0 8.534 3.84 8.534 8.533v46.933a8.533 8.533 0 0 1-8.534 8.534H554.667v42.666h119.466c4.694 0 8.534 3.84 8.534 8.534V588.8a8.533 8.533 0 0 1-8.534 8.533H554.667V716.8a8.533 8.533 0 0 1-8.534 8.533H499.2a8.533 8.533 0 0 1-8.533-8.533V597.333H371.2a8.533 8.533 0 0 1-8.533-8.533v-46.933c0-4.694 3.84-8.534 8.533-8.534h119.467v-42.666H371.2a8.533 8.533 0 0 1-8.533-8.534V435.2c0-4.693 3.84-8.533 8.533-8.533h106.539l-87.702-87.68a8.533 8.533 0 0 1 0-12.075l33.174-33.195a8.533 8.533 0 0 1 12.074 0l84.48 84.48 84.48-84.48a8.533 8.533 0 0 1 12.054 0z"  /></svg>
+    </i>
 </template>
 
-<script lang="ts">
-import type { DefineComponent } from 'vue'
-export default {
-name: 'CoinPro',
-} as DefineComponent
+<script lang="ts" setup>
+const props = defineProps({
+    fontSize: {
+        type: [String ,Number],
+        default: "20px"
+    },
+    color: {
+        type: String,
+        default: "#000000"
+    },
+    icon: {
+        type: String,
+        default: "Apple"
+    }
+})
 </script>

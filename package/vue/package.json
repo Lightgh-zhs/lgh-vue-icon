@@ -1,5 +1,5 @@
 {
-  "name": "@lgh-vue/lgh-vue-icon",
+  "name": "@lgh-vue/vue-icon",
   "version": "0.0.1",
   "description": "vue icon.",
   "type": "module",
@@ -8,7 +8,7 @@
     "svg",
     "vue"
   ],
-  "license": "None",
+  "license": "MIT",
   "files": [
     "dist"
   ],
@@ -42,6 +42,7 @@
   "scripts": {
     "dev": "vite",
     "build": "run-p build:build build:types",
+    "build:generate": "tsx build/build-code.ts",
     "build:build": "tsx build/build.ts",
     "build:icon":"tsx build/build-icon.ts",
     "build:types": "vue-tsc --declaration --emitDeclarationOnly"

@@ -29,7 +29,9 @@ const headerComment = (name: string | undefined) => {
 const contentComment = (content: string | undefined) => {
     return `
 <template>
-    ${content}
+    <i class="l-icon" :style="{fontSize:fontSize.toString().replace(/px/gi, '') + 'px',color:color}">
+        ${content}
+    </i>
 </template>
 `
 }
@@ -37,11 +39,21 @@ const contentComment = (content: string | undefined) => {
 // setup
 const exportComponent = (name: string) => {
     return `
-<script lang="ts">
-import type { DefineComponent } from 'vue'
-export default {
-name: '${name}',
-} as DefineComponent
+<script lang="ts" setup>
+const props = defineProps({
+    fontSize: {
+        type: [String ,Number],
+        default: "20px"
+    },
+    color: {
+        type: String,
+        default: "#000000"
+    },
+    icon: {
+        type: String,
+        default: "Apple"
+    }
+})
 </script>
 `
 }
@@ -54,7 +66,7 @@ const buildCode = (file: string, componentName: string, content: string) => {
     vueContent += headerComment(componentName)
     vueContent += contentComment(content)
     vueContent += exportComponent(componentName)
-    fs.writeFileSync(path.resolve(dir, '../src/components/') + "/"+file + '.vue', vueContent, 'utf8')
+    fs.writeFileSync(path.resolve(dir, '../src/components/') + "/" + file + '.vue', vueContent, 'utf8')
     exportFunction += `
 export { default as ${componentName} } from './${file}.vue'`
 }

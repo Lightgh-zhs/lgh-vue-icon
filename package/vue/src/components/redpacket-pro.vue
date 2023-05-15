@@ -6,13 +6,25 @@
 !-->
 
 <template>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <i class="l-icon" :style="{fontSize:fontSize.toString().replace(/px/gi, '') + 'px',color:color}">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
 <path fill="currentColor" d="M789.333 42.667a128 128 0 0 1 128 128v682.666a128 128 0 0 1-128 128H234.667a128 128 0 0 1-128-128V170.667a128 128 0 0 1 128-128h554.666z m0 64H234.667a64 64 0 0 0-63.894 60.245l-0.106 3.755v682.666a64 64 0 0 0 60.245 63.894l3.755 0.106h554.666a64 64 0 0 0 63.894-60.245l0.106-3.755V170.667a64 64 0 0 0-60.245-63.894l-3.755-0.106z"  /><path fill="currentColor" d="M512 405.333c158.08 0 301.27-63.658 405.333-166.762v86.058A637.355 637.355 0 0 1 512 469.333a637.355 637.355 0 0 1-405.376-144.725v-86.08A574.165 574.165 0 0 0 512 405.333z"  /></svg>
+    </i>
 </template>
 
-<script lang="ts">
-import type { DefineComponent } from 'vue'
-export default {
-name: 'RedpacketPro',
-} as DefineComponent
+<script lang="ts" setup>
+const props = defineProps({
+    fontSize: {
+        type: [String ,Number],
+        default: "20px"
+    },
+    color: {
+        type: String,
+        default: "#000000"
+    },
+    icon: {
+        type: String,
+        default: "Apple"
+    }
+})
 </script>

@@ -1,10 +1,6 @@
 declare const _default: import("vue").DefineComponent<{
-    width: {
-        type: StringConstructor;
-        default: string;
-    };
-    height: {
-        type: StringConstructor;
+    fontSize: {
+        type: (StringConstructor | NumberConstructor)[];
         default: string;
     };
     color: {
@@ -16,12 +12,8 @@ declare const _default: import("vue").DefineComponent<{
         default: string;
     };
 }, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
-    width: {
-        type: StringConstructor;
-        default: string;
-    };
-    height: {
-        type: StringConstructor;
+    fontSize: {
+        type: (StringConstructor | NumberConstructor)[];
         default: string;
     };
     color: {
@@ -33,8 +25,7 @@ declare const _default: import("vue").DefineComponent<{
         default: string;
     };
 }>>, {
-    width: string;
-    height: string;
+    fontSize: string | number;
     color: string;
     icon: string;
 }>;

@@ -6,13 +6,25 @@
 !-->
 
 <template>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <i class="l-icon" :style="{fontSize:fontSize.toString().replace(/px/gi, '') + 'px',color:color}">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
 <path fill="currentColor" d="M207.637 533.355a8.533 8.533 0 0 1 8.448 7.36 320 320 0 0 0 2.283 14.57c25.259 133.27 142.379 234.048 282.965 234.048 140.843 0 258.07-101.098 283.072-234.666 0.64-3.392 1.366-8.022 2.176-13.952a8.533 8.533 0 0 1 8.448-7.36h47.339a8.533 8.533 0 0 1 8.47 9.514c-0.598 5.163-1.131 9.302-1.6 12.395-24.385 158.464-154.411 282.09-315.905 296.64v99.563A8.533 8.533 0 0 1 524.8 960h-46.933a8.533 8.533 0 0 1-8.534-8.533l-0.021-99.563c-161.493-14.57-291.563-138.24-315.883-296.747a355.477 355.477 0 0 1-1.6-12.288 8.533 8.533 0 0 1 7.467-9.45l0.512-0.043h47.83zM501.333 64A202.667 202.667 0 0 1 704 266.667v234.666a202.667 202.667 0 0 1-405.333 0V266.667A202.667 202.667 0 0 1 501.333 64z m0 64a138.667 138.667 0 0 0-138.581 133.696l-0.085 4.97v234.667a138.667 138.667 0 0 0 277.248 4.971l0.085-4.97V266.666A138.667 138.667 0 0 0 501.333 128z"  /></svg>
+    </i>
 </template>
 
-<script lang="ts">
-import type { DefineComponent } from 'vue'
-export default {
-name: 'VoicePro',
-} as DefineComponent
+<script lang="ts" setup>
+const props = defineProps({
+    fontSize: {
+        type: [String ,Number],
+        default: "20px"
+    },
+    color: {
+        type: String,
+        default: "#000000"
+    },
+    icon: {
+        type: String,
+        default: "Apple"
+    }
+})
 </script>

@@ -6,22 +6,15 @@
 * @version V1.0.0
 !-->
 <template>
-    <i class="l-icon"
-        :style="{ width: width.toString().replace(/px/gi, '').toString + 'px', height: height.toString().replace(/px/gi, '').toString + '', color: color }">
-        <component :is="icon"></component>
-    </i>
+    <component :is="icon" :style="{ fontSize: fontSize.toString().replace('px', '') + 'px' }" :color="color"></component>
 </template>
 
 
 <script lang="ts" setup>
 const props = defineProps({
-    width: {
-        type: String || Number,
-        default: "10px"
-    },
-    height: {
-        type: String || Number,
-        default: "10px"
+    fontSize: {
+        type: [String, Number],
+        default: "20px"
     },
     color: {
         type: String,
@@ -33,9 +26,9 @@ const props = defineProps({
     }
 })
 </script>
-
-<style lang="scss" scoped>
+<style >
 .l-icon {
+    --color: inherit;
     height: 1em;
     width: 1em;
     line-height: 1em;
@@ -44,6 +37,7 @@ const props = defineProps({
     align-items: center;
     position: relative;
     fill: currentColor;
+    color: var(--color);
     font-size: inherit
 }
 </style>

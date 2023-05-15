@@ -6,13 +6,25 @@
 !-->
 
 <template>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <i class="l-icon" :style="{fontSize:fontSize.toString().replace(/px/gi, '') + 'px',color:color}">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
 <path fill="currentColor" d="M640 64a64 64 0 0 1 64 64v85.333h226.133c4.694 0 8.534 3.84 8.534 8.534V268.8a8.533 8.533 0 0 1-8.534 8.533h-55.466V832a128 128 0 0 1-128 128H277.333a128 128 0 0 1-128-128V277.333H93.867a8.533 8.533 0 0 1-8.534-8.533v-46.933c0-4.694 3.84-8.534 8.534-8.534H320V128a64 64 0 0 1 64-64h256z m170.667 213.333H213.333V832a64 64 0 0 0 60.246 63.893l3.754 0.107h469.334a64 64 0 0 0 63.893-60.245l0.107-3.755V277.333z m-392.534 128c4.694 0 8.534 3.84 8.534 8.534v324.266a8.533 8.533 0 0 1-8.534 8.534H371.2a8.533 8.533 0 0 1-8.533-8.534V413.867c0-4.694 3.84-8.534 8.533-8.534h46.933z m234.667 0c4.693 0 8.533 3.84 8.533 8.534v324.266a8.533 8.533 0 0 1-8.533 8.534h-46.933a8.533 8.533 0 0 1-8.534-8.534V413.867c0-4.694 3.84-8.534 8.534-8.534H652.8zM640 128H384v85.333h256V128z"  /></svg>
+    </i>
 </template>
 
-<script lang="ts">
-import type { DefineComponent } from 'vue'
-export default {
-name: 'DeletePro',
-} as DefineComponent
+<script lang="ts" setup>
+const props = defineProps({
+    fontSize: {
+        type: [String ,Number],
+        default: "20px"
+    },
+    color: {
+        type: String,
+        default: "#000000"
+    },
+    icon: {
+        type: String,
+        default: "Apple"
+    }
+})
 </script>

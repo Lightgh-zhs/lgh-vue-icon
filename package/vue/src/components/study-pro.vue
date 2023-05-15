@@ -6,13 +6,25 @@
 !-->
 
 <template>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <i class="l-icon" :style="{fontSize:fontSize.toString().replace(/px/gi, '') + 'px',color:color}">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
 <path fill="currentColor" d="M950.29248 321.88928l-421.30432-247.72608a30.70976 30.70976 0 0 0-31.58528 0.26624l-403.0976 246.24128A30.68928 30.68928 0 0 0 76.8 348.36992v292.16768a30.72 30.72 0 0 0 61.44 0V402.90816l89.54368 54.70208v264.66304a30.72 30.72 0 0 0 12.08832 24.42752l257.65376 196.47488a30.70976 30.70976 0 0 0 36.22912 0.75264l281.1392-196.47488a30.71488 30.71488 0 0 0 13.09184-23.71584l13.61408-284.97408 108.69248-63.91296a30.71488 30.71488 0 0 0 0-52.96128z m-182.95808 383.8464l-250.38336 174.98112-227.72736-173.64992V495.13984l208.17408 127.17056a30.70976 30.70976 0 0 0 31.58528 0.26624l249.32352-146.60096-10.97216 229.76z m28.928-311.58784c-0.24576 0.14336-0.49152 0.2816-0.72704 0.43008l-281.81504 165.7088-346.90048-211.9168 346.89536-211.91168 360.3968 211.91168-77.8496 45.77792z"  /></svg>
+    </i>
 </template>
 
-<script lang="ts">
-import type { DefineComponent } from 'vue'
-export default {
-name: 'StudyPro',
-} as DefineComponent
+<script lang="ts" setup>
+const props = defineProps({
+    fontSize: {
+        type: [String ,Number],
+        default: "20px"
+    },
+    color: {
+        type: String,
+        default: "#000000"
+    },
+    icon: {
+        type: String,
+        default: "Apple"
+    }
+})
 </script>

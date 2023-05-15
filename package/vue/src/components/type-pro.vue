@@ -6,13 +6,25 @@
 !-->
 
 <template>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <i class="l-icon" :style="{fontSize:fontSize.toString().replace(/px/gi, '') + 'px',color:color}">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
 <path fill="currentColor" d="M149.333 736a42.667 42.667 0 1 1 0 85.333 42.667 42.667 0 0 1 0-85.333z m748.8 10.667c4.694 0 8.534 3.84 8.534 8.533v46.933a8.533 8.533 0 0 1-8.534 8.534H275.2a8.533 8.533 0 0 1-8.533-8.534V755.2c0-4.693 3.84-8.533 8.533-8.533h622.933z m-748.8-288a42.667 42.667 0 1 1 0 85.333 42.667 42.667 0 0 1 0-85.333z m748.8 10.666c4.694 0 8.534 3.84 8.534 8.534V524.8a8.533 8.533 0 0 1-8.534 8.533H275.2a8.533 8.533 0 0 1-8.533-8.533v-46.933c0-4.694 3.84-8.534 8.533-8.534h622.933z m-748.8-288a42.667 42.667 0 1 1 0 85.334 42.667 42.667 0 0 1 0-85.334zM898.133 192c4.694 0 8.534 3.84 8.534 8.533v46.934a8.533 8.533 0 0 1-8.534 8.533H275.2a8.533 8.533 0 0 1-8.533-8.533v-46.934c0-4.693 3.84-8.533 8.533-8.533h622.933z"  /></svg>
+    </i>
 </template>
 
-<script lang="ts">
-import type { DefineComponent } from 'vue'
-export default {
-name: 'TypePro',
-} as DefineComponent
+<script lang="ts" setup>
+const props = defineProps({
+    fontSize: {
+        type: [String ,Number],
+        default: "20px"
+    },
+    color: {
+        type: String,
+        default: "#000000"
+    },
+    icon: {
+        type: String,
+        default: "Apple"
+    }
+})
 </script>

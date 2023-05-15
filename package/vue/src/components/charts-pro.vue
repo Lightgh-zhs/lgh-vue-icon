@@ -6,13 +6,25 @@
 !-->
 
 <template>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <i class="l-icon" :style="{fontSize:fontSize.toString().replace(/px/gi, '') + 'px',color:color}">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
 <path fill="currentColor" d="M883.31264 859.42272H141.57824a30.72 30.72 0 0 0 0 61.44h741.7344a30.72 30.72 0 0 0 0-61.44zM233.73824 815.60064a30.72 30.72 0 0 0 30.72-30.72V220.93824a30.72 30.72 0 0 0-61.44 0v563.9424a30.72 30.72 0 0 0 30.72 30.72zM508.88192 815.60064a30.72 30.72 0 0 0 30.72-30.72V180.84352a30.72 30.72 0 0 0-61.44 0v604.03712a30.72 30.72 0 0 0 30.72 30.72zM763.5456 815.60064a30.72 30.72 0 0 0 30.72-30.72V124.86656a30.72 30.72 0 0 0-61.44 0v660.01408a30.72 30.72 0 0 0 30.72 30.72z"  /></svg>
+    </i>
 </template>
 
-<script lang="ts">
-import type { DefineComponent } from 'vue'
-export default {
-name: 'ChartsPro',
-} as DefineComponent
+<script lang="ts" setup>
+const props = defineProps({
+    fontSize: {
+        type: [String ,Number],
+        default: "20px"
+    },
+    color: {
+        type: String,
+        default: "#000000"
+    },
+    icon: {
+        type: String,
+        default: "Apple"
+    }
+})
 </script>

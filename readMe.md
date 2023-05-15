@@ -14,13 +14,13 @@ yarn add lgh-vue-icon
 # 引用图标
 
 ##单独引用组件
-在组件的上方引用`lgh-vue-icon`，并在组件的模板函数中使用:
+在组件的上引用`lgh-vue-icon`，并在组件的模板函数中使用:
 ``` vue
 <template>
-<Home style="height:10px;width:10px;color:#000000"/>
+<Eleme :fontSize="20" color="#98712"/>
 </template>
 <script lang="ts" setup>
-import {Home} from 'lgh-vue-icon';
+import {Eleme} from 'lgh-vue-icon';
 </script>
 ```
 ##全局引用组件
@@ -32,20 +32,21 @@ import {createApp} from 'vue';
 const app = createApp({});
 
 // Install
-install(app，{prefix:""}); .
-install(app, {prefix:"i"}); // 组件前缀
+install(app); 
+// or 
+// install(app,"prefix") //添加组件前缀
 app.mount('#app');
 ```
 使用方法：
 ``` vue
 <template>
-<Home style="height:10px;width:10px;color:#000000"/>
+<Eleme :fontSize="30" color="#123456"/>
 </template>
 ```
 全局安装后，同时提供了一个自定义组件，可以根据名称显示svg
 ``` vue
 <template>
-<lgh-vue-icon name="Home" :height="10" :width="10" color="#000000"/>
+<custom-icon name="Eleme" :fontSize="20" color="#000000"/>
 </template>
 ```
-height和weight支持数字或者字符串，10和10px有相同效果
+fontSize支持数字或者字符串，10和10px有相同效果
